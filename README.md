@@ -2,6 +2,9 @@
 
 **SleepObserver** is a full-stack web application for tracking and analyzing sleep quality using biometric data collected from a wearable device (the SleepObserver Watch or Band). The app processes sensor readings — heart rate, body movement, temperature, and sound — to classify sleep stages, score sleep quality, and present the results through an interactive dashboard.
 
+Project Deployed and Live at: https://sleepobserver.onrender.com
+Note: Account for testing: tigrana334@gmail.com | 123456
+
 ---
 
 ## Table of Contents
