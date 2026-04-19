@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.glass {
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.1);
+  @apply bg-slate-100
+ bg-opacity-[.015]
+ rounded-xl
+ backdrop-blur-2xl
+ drop-shadow-xl;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.header-text {
+  @apply text-4xl
+  font-bold
+  text-my_white
+  cursor-default;
+}
+
+.dash-button {
+  @apply text-my_white
+  text-xl
+  font-light
+  hover:drop-shadow-glow
+  transition
+  duration-100
+  mx-8
+  cursor-default;
+}
+
+.input-field {
+  @apply text-sm
+  rounded-md
+  drop-shadow-[0px_0px_12px_rgba(0,0,0,0.5)]
+  p-2
+  my-1;
+}
+
+.content-text {
+  @apply text-my_white
+  text-xl
+  font-light
+  cursor-default
+  text-opacity-75;
+}
