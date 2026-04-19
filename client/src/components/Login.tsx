@@ -34,7 +34,7 @@ export default function Login(props: ILogin) {
       if (password && mail) {
         //Login User
         setShowLoading(true);
-        const response = await fetch('http://localhost:9000/firebase/userLogin', {
+        const response = await fetch('/firebase/userLogin', {
           method: "POST",
           body: JSON.stringify({mail, password}),
           headers: {

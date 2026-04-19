@@ -67,7 +67,7 @@ function Dashboard(props: IDashboard) {
   }, []);
 
   const loadCalculatedData = async () => {
-    await fetch('http://localhost:9000/firebase/getCalculatedData', {
+    await fetch('/firebase/getCalculatedData', {
       method: "POST",
       body: JSON.stringify({uid}),
       headers: {
@@ -111,7 +111,7 @@ function Dashboard(props: IDashboard) {
 
   //Logout User
   const logoutUser = async () => {
-    await fetch('http://localhost:9000/firebase/userLogout', {
+    await fetch('/firebase/userLogout', {
       method: "GET",
     }).then(() => {
       localStorage.removeItem('userId');
@@ -132,7 +132,7 @@ function Dashboard(props: IDashboard) {
     if (isValidEmail(mail ? mail : "null")) {
       if (password && mail) {
         //Login User
-        const response = await fetch('http://localhost:9000/firebase/userLogin', {
+        const response = await fetch('/firebase/userLogin', {
           method: "POST",
           body: JSON.stringify({mail, password}),
           headers: {
@@ -162,7 +162,7 @@ function Dashboard(props: IDashboard) {
   //Function to load the users name at the bottom left corner
   const loadName = async () => {
     if (uid) {
-      await fetch("http://localhost:9000/firebase/getUserInfo",
+      await fetch("/firebase/getUserInfo",
       {
         method: "POST",
         body: JSON.stringify({uid}),

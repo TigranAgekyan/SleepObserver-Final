@@ -31,7 +31,7 @@ function SignUp(props: Props) {
         if (isValidEmail(mail ? mail : "null")) {
         if (password && mail) {
             //Login User
-            const response = await fetch('http://localhost:9000/firebase/userSignup', {
+            const response = await fetch('/firebase/userSignup', {
             method: "POST",
             body: JSON.stringify({mail, password}),
             headers: {
